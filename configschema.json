@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "adminURL": {"type": "string", "default": ""},
+    "trackerURL": {"type": "string", "default": ""},
+    "eventId": {"type": "integer", "default": 1},
+    "rundownLength": {"type": "integer", "default": 8},
+    "fetchInterval": {"type": "integer", "default": 60000},
+    "trackerUsername": {"type": "string", "default": ""},
+    "trackerPassword": {"type": "string", "default": ""}
+  }
+}

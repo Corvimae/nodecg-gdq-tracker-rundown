@@ -1,0 +1,51 @@
+{
+  "name": "nodecg-gdq-tracker-rundown",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "watch": "npx parcel watch",
+    "build": "npx parcel build"
+  },
+  "targets": {
+    "dashboard": {
+      "source": "src/dashboard/dashboard.html",
+      "distDir": "dashboard",
+      "publicUrl": "/bundles/nodecg-gdq-tracker-rundown/dashboard"
+    },
+    "extension": {
+      "source": "src/extension.ts",
+      "context": "node",
+      "isLibrary": true,
+      "outputFormat": "commonjs",
+      "distDir": "."
+    }
+  },
+  "nodecg": {
+    "compatibleRange": "^1.5.0",
+    "dashboardPanels": [
+      {
+        "name": "rundown",
+        "title": "Rundown",
+        "file": "dashboard.html",
+        "width": 3
+      }
+    ]
+  },
+  "dependencies": {
+    "fetch-cookie": "^2.1.0",
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.6.2",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/node-fetch": "2.6.2",
+    "@types/react-dom": "^18.0.9",
+    "@types/styled-components": "^5.1.26",
+    "nodecg-types": "^1.9.0",
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
+  }
+}
