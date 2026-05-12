@@ -70,18 +70,20 @@ export const DashboardApp: React.FC = () => {
     namespace: BUNDLE_NAMESPACE,
   });
 
+  console.log('ouggh', rundown);
+
   return (
     <Container>
       {rundown.map((item, index) => {
-        switch (item.model) {
-          case 'tracker.speedrun':
-            return <SpeedrunItem key={index} data={item.fields} />
+        switch (item.type) {
+          case 'speedrun':
+            return <SpeedrunItem key={index} data={item} />
 
-          case 'tracker.ad':
-            return <AdItem key={index} data={item.fields} />
+          case 'ad':
+            return <AdItem key={index} data={item} />
 
-          case 'tracker.interview':
-            return <InterviewItem key={index} data={item.fields} />
+          case 'interview':
+            return <InterviewItem key={index} data={item} />
 
           default:
             return null;
